@@ -1,6 +1,8 @@
+// Object.assign - to copy the object (deep copy)
+
 // IIF
 (function(a) {
-    console.log("callling",a);
+    console.log("callling"+a);
 })(10);
 
 /* 
