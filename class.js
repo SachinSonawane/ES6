@@ -189,3 +189,38 @@ class testFunction extends f() {
 
 var fClass = f();
 console.log(new testFunction().display());
+
+/* Mixins */
+
+let mixinClass = {
+    display() {
+        return `Hi this is ${this.name}`;
+    }
+}
+
+class mixinTest {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+Object.assign(mixinTest.prototype, mixinClass);
+
+console.log('check',new mixinTest('Sachin').display());
+console.log(f.prototype);
+
+/* Static keyword - to store class level data - not bound to prototype
+   static properties are also possible both can be inheritaed
+*/
+
+class checkStatic {
+    static name = 'sachin';
+    static display() {
+        console.log('check-', this.name)
+    }
+}
+
+class testStatic extends checkStatic{}
+
+testStatic.display();
+console.log(testStatic.name);
