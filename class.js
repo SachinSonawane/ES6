@@ -29,10 +29,11 @@ function myFunction(name, surname) {
 }
 
 myFunction.prototype.display = function () {
-    return `Hi this is ${this.name}`;
+    return `shahsi ${this.name}`;
 }
 
 let obj1 = new myFunction('sachin', 'sonawane');
+console.log(myFunction.prototype.name);
 console.log(obj1.display());
 
 /* Just like functions, classes can be defined inside another expression, passed around, returned, assigned, etc. */
@@ -41,6 +42,8 @@ let Test = class {
         console.log("hello world");
     }
 }
+
+new Test().display();
 
 let User = class MyClass {
     sayHi() {
@@ -71,7 +74,7 @@ class newTest {
     }
 
     get name() {
-        return this._name;
+        return this._nam;
     }
 
     set name(name) {
@@ -79,8 +82,8 @@ class newTest {
             console.log("Name is too short.");
             return;
         }
-        this._name = name;
-        console.log("Your name is", this._name);
+        this._nam = name;
+        console.log("Your name is", this._nam);
     }
 }
 
@@ -222,5 +225,4 @@ class checkStatic {
 
 class testStatic extends checkStatic{}
 
-testStatic.display();
-console.log(testStatic.name);
+//testStatic.display();
