@@ -9,7 +9,6 @@ map.has(key) – returns true if the key exists, false otherwise.
 map.delete(key) – removes the value by the key.
 map.clear() – removes everything from the map.
 map.size – returns the current element count.
-
 we can user map[key] - this will behave like plain object
 
 */
@@ -26,6 +25,3 @@ console.log(map.get(1));
 console.log(map.get('1'));
 console.log(map.get(true));
 console.log(map.get(obj));
-
-
-
